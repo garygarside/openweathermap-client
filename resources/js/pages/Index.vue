@@ -6,11 +6,15 @@
             <img src="/icons/animated/weather.svg" alt="Logo" class="h-8 w-auto" />
             <h1 class="font-semibold">OpenWeatherMap</h1>
         </div>
-        <Search />
+
+        <Error v-if="$page.props.missingKey" error="Please populate your OPENWEATHER_API_KEY variable in your .env file" />
+
+        <Search v-else />
     </div>
 </template>
 
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3';
 import Search from '@/components/Search.vue';
+import Error from '@/components/Error.vue';
 </script>

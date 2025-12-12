@@ -37,6 +37,7 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
+            'missingKey' => config('services.openweather.api_key') === null || trim(config('services.openweather.api_key')) === '',
         ];
     }
 }
