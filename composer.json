@@ -44,8 +44,8 @@
         "setup": [
             "composer install",
             "npm i",
-            "@php artisan key:generate",
-            "cp .env.example .env"
+            "cp .env.example .env",
+            "@php artisan key:generate"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
