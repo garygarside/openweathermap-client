@@ -19,6 +19,7 @@ The application requires the following dependencies and their respective version
 
 ```sh
 git clone https://github.com/garygarside/openweathermap-client
+cd openweathermap-client
 ```
 
 2. Run the application setup:
